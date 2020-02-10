@@ -21,24 +21,26 @@ function list() {
  */
 
 function portsTable(lines) {
-    var table = cliui({ width: 80 });
+    const tableWidthPx = 120;
+    const commandWidthPx = 64;
+    var table = cliui({ width: tableWidthInPixels });
 
     table.div(
         col({ text: 'port' }),
-        col({ text: 'command', width: 24 }),
+        col({ text: 'command', width: commandWidthPx }),
         col({ text: 'pid' }),
         col({ text: 'type' }),
         col({ text: 'fd' }),
     );
 
     table.div(
-        col({ text: '--------------------------------------------------------------------------', width: 80 })
+        col({ text: '--------------------------------------------------------------------------', width: tableWidthInPixels })
     );
 
     lines.forEach((line) => {
         table.div(
             col({ text: line.port }),
-            col({ text: line.command, width: 24 }),
+            col({ text: line.command, width: commandWidthPx }),
             col({ text: line.pid }),
             col({ text: line.type }),
             col({ text: line.fileDescriptor }),
@@ -46,7 +48,7 @@ function portsTable(lines) {
     })
 
     table.div(
-        col({ width: 80 })
+        col({ width: tableWidthInPixels })
     );
 
     return table.toString();
