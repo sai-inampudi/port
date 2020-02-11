@@ -5,7 +5,7 @@ a command line utility for managing local ports
 
 One line install
 ```console
-curl -o /usr/local/bin/port https://raw.githubusercontent.com/dylanstanfield/port/master/port && chmod +x /usr/local/bin/port
+curl -o /usr/local/bin/port https://raw.githubusercontent.com/sai-inampudi/port/master/port && chmod +x /usr/local/bin/port
 ```
 
 ## Usage
